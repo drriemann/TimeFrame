@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="shedule" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Время</th>
+        <th>пн</th>
+        <th>вт</th>
+        <th>ср</th>
+        <th>чт</th>
+        <th>пт</th>
+        <th>сб</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in timefr %}
+        <tr>
+          <td>{{ t.timef }}</td>
+          <td>{{ t.monday }}</td>
+          <td>{{ t.tuesday }}</td>
+          <td>{{ t.wednesday }}</td>
+          <td>{{ t.thursday }}</td>
+          <td>{{ t.friday }}</td>
+          <td>{{ t.saturday }}</td>
+
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
